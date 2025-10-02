@@ -12,3 +12,4 @@ C:\Users\anton.faren\Desktop\prog2\tamagotchi\tamagotchi\obj\Debug\net8.0\refint
 C:\Users\anton.faren\Desktop\prog2\tamagotchi\tamagotchi\obj\Debug\net8.0\tamagotchi.pdb
 C:\Users\anton.faren\Desktop\prog2\tamagotchi\tamagotchi\obj\Debug\net8.0\tamagotchi.genruntimeconfig.cache
 C:\Users\anton.faren\Desktop\prog2\tamagotchi\tamagotchi\obj\Debug\net8.0\ref\tamagotchi.dll
+C:\Users\anton.faren\Desktop\prog2\tamagotchi\tamagotchi\obj\Debug\net8.0\tamagotchi.sourcelink.json

@@ -7,9 +7,13 @@ public class Tamagothci
 
     public string Name;
 
+
+    public bool _IsAlive;
+
     private int Hp = 10;
 
-   private List<string> names = ["Elis"];
+   private List<string> words = [];
+
 
     // public Tamagothci()
     // {
@@ -22,27 +26,26 @@ public class Tamagothci
 
     public void Feed()
     {
-        _hunger--;
+        _hunger -= 2;
     }
 
     public void Hi()
     {
         
-        int i = Random.Shared.Next(names.Count);
-        Name = names[i];
+        int i = Random.Shared.Next(words.Count);
 
-        Console.WriteLine(names[i]);
+        Console.WriteLine(words[i]);
 
         ReduceBoredom();
 
     }
     public void Teach()
     {
-         Console.WriteLine($"Vad vill du lära Tama");
+         Console.WriteLine($"Vad vill du lära {Name}");
         string word = Console.ReadLine() ?? string.Empty;
-        names.Add(word);
+        words.Add(word);
 
-        Console.WriteLine($"Tama Lärde sig {word}");
+        Console.WriteLine($"{Name} Lärde sig {word}");
 
 
 
@@ -53,6 +56,11 @@ public class Tamagothci
     {
         _boredom++;
         _hunger++;
+        
+        if (_hunger > 10 || _boredom > 10)
+        {
+            Hp -= 10;
+        }
 
 
     }
@@ -77,6 +85,6 @@ public class Tamagothci
 
     private void ReduceBoredom()
     {
-        _boredom--;
+        _boredom -=2;
     }
 }

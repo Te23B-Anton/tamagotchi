@@ -1,6 +1,9 @@
 ﻿
 Tamagothci tama = new();
 
+Console.WriteLine("What is your tamas name?");
+tama.Name = Console.ReadLine();
+
 while (tama.GetAlive())
 {
 
@@ -9,30 +12,33 @@ while (tama.GetAlive())
     tama.PrintStats();
 
     Console.WriteLine("What do you want to do?");
-    Console.WriteLine("1. Feed");
-    Console.WriteLine("2. Say hi to ");
-    Console.WriteLine("3. Teach word  ");
+    Console.WriteLine($"1. Feed {tama.Name}");
+    Console.WriteLine($"2. Say hi to {tama.Name}");
+    Console.WriteLine($"3. Teach {tama.Name} a word  ");
 
     String thing = Console.ReadLine();
 
-    if (thing == "Feed")
+    if (thing == "1")
     {
         tama.Feed();
     }
 
-    if (thing == "hi")
+    if (thing == "2")
     {
         tama.Hi();
     }
 
-    if (thing == "teach")
-        {
-            tama.Teach();
-    
-        }
+    if (thing == "3")
+    {
+        tama.Teach();
 
-    Console.ReadLine();
+    }
+
 }
 
+Console.WriteLine($"{tama.Name} is Dead!");
 Console.ReadLine();
+
+
+
 
